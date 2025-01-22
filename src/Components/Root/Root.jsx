@@ -5,10 +5,10 @@ import { NavBar } from "../NavBar/NavBar"
 
 export const Roots = () => {
   return (
-    <div>
+    <div className="max-w-6xl mx-auto">
         <NavBar></NavBar>
         <Outlet>
-          
+
         </Outlet>
         <Footer></Footer>
     </div>
