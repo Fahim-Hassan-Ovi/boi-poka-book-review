@@ -1,5 +1,6 @@
 import { useLoaderData, useParams } from "react-router-dom"
 import { addStoredReadList, addStoredWishList } from "../../utility/addToDb";
+import { Helmet } from "react-helmet";
 
 export const BookDetail = () => {
 
@@ -44,6 +45,11 @@ export const BookDetail = () => {
             </div>
             <div className="flex flex-col
              gap-7">
+                <Helmet>
+                <meta charSet="utf-8" />
+                <title>Book Details | Boi Poka</title>
+                <link rel="canonical" href="http://mysite.com/example" />
+            </Helmet>
                 <h2 >Book Details: {bookId}</h2>
                 <h1 className="text-5xl">{bookName}</h1>
                 <p>By: {author}</p>

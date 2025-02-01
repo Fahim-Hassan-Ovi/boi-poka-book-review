@@ -4,6 +4,7 @@ import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import 'react-tabs/style/react-tabs.css';
 import { getStoredReadList } from '../../utility/addToDb';
 import { Book } from '../Book/Book';
+import { Helmet } from 'react-helmet';
 
 export const ListedBooks = () => {
     const [readList, setReadList] = useState([]);
@@ -38,6 +39,11 @@ export const ListedBooks = () => {
     // ideally we will directly get the data from the database
     return (
         <div>
+            <Helmet>
+                <meta charSet="utf-8" />
+                <title>Listed Books | Boi Poka</title>
+                <link rel="canonical" href="http://mysite.com/example" />
+            </Helmet>
             <h2 className='text-3xl my-8'>ListedBooks</h2>
 
             <div class="dropdown">
